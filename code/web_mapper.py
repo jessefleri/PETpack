@@ -12,7 +12,6 @@ import folium
 import json
 import vincent
 import pandas as pd
-reload(pet)
 
 df = pd.read_excel(r'climate_data.xlsx',header=0)
 
@@ -22,9 +21,9 @@ web = folium.Map(
     tiles='Stamen Terrain')
 
 for index, row in df.iterrows():
-    y = row[1:13]
-    test = pet.ET1(y,40,2000)
-    scatter = vincent.Line(test, width=400, height=200)
+    tem = row[1:13]
+    model = pet.ET1(tem,df.iloc[index,14],2000)
+    scatter = vincent.Line(model, width=400, height=200)
     scatter.axis_titles(x='Month', y='Potential ET (mm)')
     scatter.legend(title='Models')
     scatter_dict = json.loads(scatter.to_json())
@@ -33,6 +32,5 @@ for index, row in df.iterrows():
     folium.CircleMarker([df.iloc[index,14], df.iloc[index,15]],
                         color='crimson', fill=True, fill_color='crimson',
                         popup=popup).add_to(web)
-    
-    
-web.save('web.html')
+
+web.save('pet-map.html')
