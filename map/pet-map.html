@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_128d899a237b462c82080d5b7bc55740 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+    
+            <style> #vega_473973f0470246118ed42d7ff7bd4fc9 {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/1.4.3/vega.min.js"></script>
+    
+            <style> #vega_3f2e26aec3854082a4400713c89aea88 {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_bf4ab83071174fbe9e094c00166465f5 {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_501ee229f1934397944b869adf6bd19f {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_3448f936e30a4d5b912c483ccdcbcd6b {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_203019c71a754d12be4b7d63c94ed5c1 {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_dcfd9151df9a4fda869057fdcb5b8658 {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_daaedf78357040919781dca5e5b0afc2 {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_ff03cff0bb7e4735b1619f5c26234a66 {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_9b3a385563704a2988f80a1045b9308f {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_472c9c6267d1433ca048c395e8bb4c03 {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_03b76b5a7d8f4c45896299de26b52f52 {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_cd344d43b9a041a492e7b2dc4c0ec648 {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_d899f7ed29a941469303a0d6bd2cecf1 {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_4fa368eca366435abecbc9cb923a3913 {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_8e6da6748c5941119efe9bd9ddf4dc17 {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_1234a10d9ccb486085b65e19f43fee29 {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_a3cdb44b0f7b41b2ba07803ef0a75373 {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_255ce5b410624f50a63e2df39abbc5d8 {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_88b246f845fd4347a6da5820d8a37301 {
+                position : relative;
+                width : 525.0px;
+                height: 250.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_128d899a237b462c82080d5b7bc55740" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_128d899a237b462c82080d5b7bc55740 = L.map(
+                                  'map_128d899a237b462c82080d5b7bc55740',
+                                  {center: [39.737,-110.8338],
+                                  zoom: 7,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_0dbd24aa05754e02ac11d0369aa9c3bf = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+        
+    
+            var circle_marker_5f4861f61f804e0c96d8c278550c18af = L.circleMarker(
+                [25.8064,-80.1336],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    function vega_parse(spec, div) {
+            vg.parse.spec(spec, function(chart) { chart({el:div}).update(); });}
+    
+            var popup_7ebb3d43689b4c9d83240fb9db8c8e07 = L.popup({maxWidth: '650'});
+
+            
+                var vega_473973f0470246118ed42d7ff7bd4fc9 = $('             <div id="vega_473973f0470246118ed42d7ff7bd4fc9"></div>             ')[0];
+                popup_7ebb3d43689b4c9d83240fb9db8c8e07.setContent(vega_473973f0470246118ed42d7ff7bd4fc9);
+            
+
+            circle_marker_5f4861f61f804e0c96d8c278550c18af.bindPopup(popup_7ebb3d43689b4c9d83240fb9db8c8e07);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 22.125628351791867, "col": "thornthwait", "idx": 1}, {"val": 39.68347076728551, "col": "blaney-criddle", "idx": 1}, {"val": 17.95631524178605, "col": "hargreaves", "idx": 1}, {"val": 21.551693854405098, "col": "thornthwait", "idx": 2}, {"val": 35.651941434224945, "col": "blaney-criddle", "idx": 2}, {"val": 16.3040647505551, "col": "hargreaves", "idx": 2}, {"val": 46.57845088604692, "col": "thornthwait", "idx": 3}, {"val": 49.49285882483435, "col": "blaney-criddle", "idx": 3}, {"val": 21.941049601682884, "col": "hargreaves", "idx": 3}, {"val": 54.283533977227364, "col": "thornthwait", "idx": 4}, {"val": 50.428914529312166, "col": "blaney-criddle", "idx": 4}, {"val": 22.10753602863778, "col": "hargreaves", "idx": 4}, {"val": 69.08671539219652, "col": "thornthwait", "idx": 5}, {"val": 58.28033584036018, "col": "blaney-criddle", "idx": 5}, {"val": 24.06484831623103, "col": "hargreaves", "idx": 5}, {"val": 89.67167341278007, "col": "thornthwait", "idx": 6}, {"val": 58.71185414601341, "col": "blaney-criddle", "idx": 6}, {"val": 25.498827911307842, "col": "hargreaves", "idx": 6}, {"val": 102.78496806875341, "col": "thornthwait", "idx": 7}, {"val": 63.29718635211776, "col": "blaney-criddle", "idx": 7}, {"val": 27.406626233664074, "col": "hargreaves", "idx": 7}, {"val": 95.15858724049205, "col": "thornthwait", "idx": 8}, {"val": 60.25531706572612, "col": "blaney-criddle", "idx": 8}, {"val": 27.0879935568117, "col": "hargreaves", "idx": 8}, {"val": 84.52394526745745, "col": "thornthwait", "idx": 9}, {"val": 52.77468977454602, "col": "blaney-criddle", "idx": 9}, {"val": 26.009207561332634, "col": "hargreaves", "idx": 9}, {"val": 65.9629367063803, "col": "thornthwait", "idx": 10}, {"val": 50.72059380209473, "col": "blaney-criddle", "idx": 10}, {"val": 24.991946334481383, "col": "hargreaves", "idx": 10}, {"val": 41.7650041428105, "col": "thornthwait", "idx": 11}, {"val": 41.97309701991948, "col": "blaney-criddle", "idx": 11}, {"val": 21.426697929972644, "col": "hargreaves", "idx": 11}, {"val": 44.917280179766074, "col": "thornthwait", "idx": 12}, {"val": 44.08710370195935, "col": "blaney-criddle", "idx": 12}, {"val": 22.642813519228906, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_473973f0470246118ed42d7ff7bd4fc9);
+            
+            
+        
+    
+            var circle_marker_da81c1a01cd64081ba392c942e8de93f = L.circleMarker(
+                [32.1314,-110.955],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_a5578e7b1baa42308fa0779133ff9f15 = L.popup({maxWidth: '650'});
+
+            
+                var vega_3f2e26aec3854082a4400713c89aea88 = $('             <div id="vega_3f2e26aec3854082a4400713c89aea88"></div>             ')[0];
+                popup_a5578e7b1baa42308fa0779133ff9f15.setContent(vega_3f2e26aec3854082a4400713c89aea88);
+            
+
+            circle_marker_da81c1a01cd64081ba392c942e8de93f.bindPopup(popup_a5578e7b1baa42308fa0779133ff9f15);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 6.155848286641711, "col": "thornthwait", "idx": 1}, {"val": 29.833650645239118, "col": "blaney-criddle", "idx": 1}, {"val": 12.807786144417028, "col": "hargreaves", "idx": 1}, {"val": 15.2666245278779, "col": "thornthwait", "idx": 2}, {"val": 31.41145175447, "col": "blaney-criddle", "idx": 2}, {"val": 16.05726416240903, "col": "hargreaves", "idx": 2}, {"val": 25.963709962068666, "col": "thornthwait", "idx": 3}, {"val": 43.2134689460805, "col": "blaney-criddle", "idx": 3}, {"val": 20.172339668547124, "col": "hargreaves", "idx": 3}, {"val": 35.466509757020226, "col": "thornthwait", "idx": 4}, {"val": 46.19677224713886, "col": "blaney-criddle", "idx": 4}, {"val": 21.58098912151677, "col": "hargreaves", "idx": 4}, {"val": 61.300752801351415, "col": "thornthwait", "idx": 5}, {"val": 57.77960802001513, "col": "blaney-criddle", "idx": 5}, {"val": 26.602392257957383, "col": "hargreaves", "idx": 5}, {"val": 125.69657654238723, "col": "thornthwait", "idx": 6}, {"val": 65.64603086910267, "col": "blaney-criddle", "idx": 6}, {"val": 34.659977623292725, "col": "hargreaves", "idx": 6}, {"val": 139.11823859790235, "col": "thornthwait", "idx": 7}, {"val": 70.42692008006418, "col": "blaney-criddle", "idx": 7}, {"val": 37.12060215541273, "col": "hargreaves", "idx": 7}, {"val": 104.30249954714915, "col": "thornthwait", "idx": 8}, {"val": 63.09114226906334, "col": "blaney-criddle", "idx": 8}, {"val": 33.62874225282766, "col": "hargreaves", "idx": 8}, {"val": 72.11117716023422, "col": "thornthwait", "idx": 9}, {"val": 51.405807100218, "col": "blaney-criddle", "idx": 9}, {"val": 29.265654911370994, "col": "hargreaves", "idx": 9}, {"val": 57.45091006625777, "col": "thornthwait", "idx": 10}, {"val": 48.47054721682972, "col": "blaney-criddle", "idx": 10}, {"val": 28.162831777800914, "col": "hargreaves", "idx": 10}, {"val": 20.01526414015765, "col": "thornthwait", "idx": 11}, {"val": 34.65135496154272, "col": "blaney-criddle", "idx": 11}, {"val": 18.882450301841427, "col": "hargreaves", "idx": 11}, {"val": 9.471482426076788, "col": "thornthwait", "idx": 12}, {"val": 31.26839113772943, "col": "blaney-criddle", "idx": 12}, {"val": 14.93997986257296, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_3f2e26aec3854082a4400713c89aea88);
+            
+            
+        
+    
+            var circle_marker_a30c525028b24d83bd099eb646765358 = L.circleMarker(
+                [36.0719,-115.163],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_58dcdb1e808b42a3b619a308df8bb3cf = L.popup({maxWidth: '650'});
+
+            
+                var vega_bf4ab83071174fbe9e094c00166465f5 = $('             <div id="vega_bf4ab83071174fbe9e094c00166465f5"></div>             ')[0];
+                popup_58dcdb1e808b42a3b619a308df8bb3cf.setContent(vega_bf4ab83071174fbe9e094c00166465f5);
+            
+
+            circle_marker_a30c525028b24d83bd099eb646765358.bindPopup(popup_58dcdb1e808b42a3b619a308df8bb3cf);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 3.293617861481166, "col": "thornthwait", "idx": 1}, {"val": 26.739946915397663, "col": "blaney-criddle", "idx": 1}, {"val": 10.047191988733102, "col": "hargreaves", "idx": 1}, {"val": 10.54275692511619, "col": "thornthwait", "idx": 2}, {"val": 28.938552393500466, "col": "blaney-criddle", "idx": 2}, {"val": 13.451056965899427, "col": "hargreaves", "idx": 2}, {"val": 23.52677573005441, "col": "thornthwait", "idx": 3}, {"val": 42.39293437313869, "col": "blaney-criddle", "idx": 3}, {"val": 18.42667696795381, "col": "hargreaves", "idx": 3}, {"val": 35.1870759035324, "col": "thornthwait", "idx": 4}, {"val": 46.54877438518101, "col": "blaney-criddle", "idx": 4}, {"val": 20.277101053665014, "col": "hargreaves", "idx": 4}, {"val": 63.129332495979476, "col": "thornthwait", "idx": 5}, {"val": 59.081295089274974, "col": "blaney-criddle", "idx": 5}, {"val": 25.23536365690405, "col": "hargreaves", "idx": 5}, {"val": 157.64189543257464, "col": "thornthwait", "idx": 6}, {"val": 70.54785793117911, "col": "blaney-criddle", "idx": 6}, {"val": 35.61677854372405, "col": "hargreaves", "idx": 6}, {"val": 178.57761382880574, "col": "thornthwait", "idx": 7}, {"val": 76.01818778244555, "col": "blaney-criddle", "idx": 7}, {"val": 38.57751285469734, "col": "hargreaves", "idx": 7}, {"val": 139.75171946081684, "col": "thornthwait", "idx": 8}, {"val": 68.298758041358, "col": "blaney-criddle", "idx": 8}, {"val": 35.677378155012704, "col": "hargreaves", "idx": 8}, {"val": 79.72356355944365, "col": "thornthwait", "idx": 9}, {"val": 52.64417111476219, "col": "blaney-criddle", "idx": 9}, {"val": 28.773393021646164, "col": "hargreaves", "idx": 9}, {"val": 45.38109935147878, "col": "thornthwait", "idx": 10}, {"val": 45.63552001795931, "col": "blaney-criddle", "idx": 10}, {"val": 24.339228374723255, "col": "hargreaves", "idx": 10}, {"val": 14.49565242856688, "col": "thornthwait", "idx": 11}, {"val": 32.003096725473476, "col": "blaney-criddle", "idx": 11}, {"val": 16.051782845320904, "col": "hargreaves", "idx": 11}, {"val": 3.1106136678732432, "col": "thornthwait", "idx": 12}, {"val": 25.91414016798761, "col": "blaney-criddle", "idx": 12}, {"val": 9.955429459795482, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_bf4ab83071174fbe9e094c00166465f5);
+            
+            
+        
+    
+            var circle_marker_cd1e5a54441046129d719a4ee6fed844 = L.circleMarker(
+                [37.268,-109.927],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_b94f86601dd0414b846dac20f5273846 = L.popup({maxWidth: '650'});
+
+            
+                var vega_501ee229f1934397944b869adf6bd19f = $('             <div id="vega_501ee229f1934397944b869adf6bd19f"></div>             ')[0];
+                popup_b94f86601dd0414b846dac20f5273846.setContent(vega_501ee229f1934397944b869adf6bd19f);
+            
+
+            circle_marker_cd1e5a54441046129d719a4ee6fed844.bindPopup(popup_b94f86601dd0414b846dac20f5273846);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 0.0, "col": "thornthwait", "idx": 1}, {"val": 17.406700241995605, "col": "blaney-criddle", "idx": 1}, {"val": 0.0, "col": "hargreaves", "idx": 1}, {"val": 4.7598183798305405, "col": "thornthwait", "idx": 2}, {"val": 20.986115375298542, "col": "blaney-criddle", "idx": 2}, {"val": 18.522506471211102, "col": "hargreaves", "idx": 2}, {"val": 14.955147919426409, "col": "thornthwait", "idx": 3}, {"val": 33.28473645599415, "col": "blaney-criddle", "idx": 3}, {"val": 32.68558368328953, "col": "hargreaves", "idx": 3}, {"val": 23.192035206894055, "col": "thornthwait", "idx": 4}, {"val": 37.700502411829675, "col": "blaney-criddle", "idx": 4}, {"val": 39.00236291554809, "col": "hargreaves", "idx": 4}, {"val": 40.57692699602166, "col": "thornthwait", "idx": 5}, {"val": 49.49595386977892, "col": "blaney-criddle", "idx": 5}, {"val": 52.74989624217018, "col": "hargreaves", "idx": 5}, {"val": 83.6959078602141, "col": "thornthwait", "idx": 6}, {"val": 61.56901855713662, "col": "blaney-criddle", "idx": 6}, {"val": 82.00519234326734, "col": "hargreaves", "idx": 6}, {"val": 90.49659448030943, "col": "thornthwait", "idx": 7}, {"val": 66.13169386142012, "col": "blaney-criddle", "idx": 7}, {"val": 88.58141659430572, "col": "hargreaves", "idx": 7}, {"val": 67.21807194492804, "col": "thornthwait", "idx": 8}, {"val": 56.80348624938762, "col": "blaney-criddle", "idx": 8}, {"val": 75.51880357979299, "col": "hargreaves", "idx": 8}, {"val": 46.40226053231131, "col": "thornthwait", "idx": 9}, {"val": 44.369257598694944, "col": "blaney-criddle", "idx": 9}, {"val": 62.26968382709109, "col": "hargreaves", "idx": 9}, {"val": 29.585135392331253, "col": "thornthwait", "idx": 10}, {"val": 37.794571845550664, "col": "blaney-criddle", "idx": 10}, {"val": 50.622799403147326, "col": "hargreaves", "idx": 10}, {"val": 10.163491269149828, "col": "thornthwait", "idx": 11}, {"val": 25.2153041622513, "col": "blaney-criddle", "idx": 11}, {"val": 28.70322296706795, "col": "hargreaves", "idx": 11}, {"val": 1.0420599372766677, "col": "thornthwait", "idx": 12}, {"val": 19.00777002713517, "col": "blaney-criddle", "idx": 12}, {"val": 10.842750480117818, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_501ee229f1934397944b869adf6bd19f);
+            
+            
+        
+    
+            var circle_marker_68205f6f63384c178887eb78a9bdc335 = L.circleMarker(
+                [37.51,-113.4],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_d16ba03e544f4d8b8c2f285a83925c55 = L.popup({maxWidth: '650'});
+
+            
+                var vega_3448f936e30a4d5b912c483ccdcbcd6b = $('             <div id="vega_3448f936e30a4d5b912c483ccdcbcd6b"></div>             ')[0];
+                popup_d16ba03e544f4d8b8c2f285a83925c55.setContent(vega_3448f936e30a4d5b912c483ccdcbcd6b);
+            
+
+            circle_marker_68205f6f63384c178887eb78a9bdc335.bindPopup(popup_d16ba03e544f4d8b8c2f285a83925c55);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 0.0, "col": "thornthwait", "idx": 1}, {"val": 16.19034035412123, "col": "blaney-criddle", "idx": 1}, {"val": 0.0, "col": "hargreaves", "idx": 1}, {"val": 3.5715587375009603, "col": "thornthwait", "idx": 2}, {"val": 17.63474523562863, "col": "blaney-criddle", "idx": 2}, {"val": 9.08792567450952, "col": "hargreaves", "idx": 2}, {"val": 9.023505500229263, "col": "thornthwait", "idx": 3}, {"val": 25.757668547008404, "col": "blaney-criddle", "idx": 3}, {"val": 15.398565981016315, "col": "hargreaves", "idx": 3}, {"val": 14.935541627036702, "col": "thornthwait", "idx": 4}, {"val": 29.08852879475017, "col": "blaney-criddle", "idx": 4}, {"val": 20.01806769760521, "col": "hargreaves", "idx": 4}, {"val": 26.7169177961872, "col": "thornthwait", "idx": 5}, {"val": 38.30163412449469, "col": "blaney-criddle", "idx": 5}, {"val": 29.426995222095034, "col": "hargreaves", "idx": 5}, {"val": 55.49239034150135, "col": "thornthwait", "idx": 6}, {"val": 49.76979708727984, "col": "blaney-criddle", "idx": 6}, {"val": 53.70077440138906, "col": "hargreaves", "idx": 6}, {"val": 63.47032394238529, "col": "thornthwait", "idx": 7}, {"val": 55.352717237152206, "col": "blaney-criddle", "idx": 7}, {"val": 62.31088870622911, "col": "hargreaves", "idx": 7}, {"val": 51.48582312160054, "col": "thornthwait", "idx": 8}, {"val": 48.30180842980852, "col": "blaney-criddle", "idx": 8}, {"val": 54.27289304731638, "col": "hargreaves", "idx": 8}, {"val": 33.52601838380352, "col": "thornthwait", "idx": 9}, {"val": 35.95466912347615, "col": "blaney-criddle", "idx": 9}, {"val": 39.9907016083249, "col": "hargreaves", "idx": 9}, {"val": 22.93187830780937, "col": "thornthwait", "idx": 10}, {"val": 30.780433110208076, "col": "blaney-criddle", "idx": 10}, {"val": 31.860539908047357, "col": "hargreaves", "idx": 10}, {"val": 7.142177148543168, "col": "thornthwait", "idx": 11}, {"val": 20.18570368603106, "col": "blaney-criddle", "idx": 11}, {"val": 14.641762272406558, "col": "hargreaves", "idx": 11}, {"val": 0.0, "col": "thornthwait", "idx": 12}, {"val": 16.098490890664213, "col": "blaney-criddle", "idx": 12}, {"val": 0.0, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_3448f936e30a4d5b912c483ccdcbcd6b);
+            
+            
+        
+    
+            var circle_marker_9b61464bc8ad438c873f6625e2049313 = L.circleMarker(
+                [37.615,-118.011],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_d5fa5ec46b5942ddb92b87c5f0611be9 = L.popup({maxWidth: '650'});
+
+            
+                var vega_203019c71a754d12be4b7d63c94ed5c1 = $('             <div id="vega_203019c71a754d12be4b7d63c94ed5c1"></div>             ')[0];
+                popup_d5fa5ec46b5942ddb92b87c5f0611be9.setContent(vega_203019c71a754d12be4b7d63c94ed5c1);
+            
+
+            circle_marker_9b61464bc8ad438c873f6625e2049313.bindPopup(popup_d5fa5ec46b5942ddb92b87c5f0611be9);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 0.0, "col": "thornthwait", "idx": 1}, {"val": 16.371666083922563, "col": "blaney-criddle", "idx": 1}, {"val": 0.0, "col": "hargreaves", "idx": 1}, {"val": 3.5540132094540144, "col": "thornthwait", "idx": 2}, {"val": 18.9654984602004, "col": "blaney-criddle", "idx": 2}, {"val": 12.596525043237216, "col": "hargreaves", "idx": 2}, {"val": 14.02276108675807, "col": "thornthwait", "idx": 3}, {"val": 30.889396097432506, "col": "blaney-criddle", "idx": 3}, {"val": 26.056799155783068, "col": "hargreaves", "idx": 3}, {"val": 23.95398351521173, "col": "thornthwait", "idx": 4}, {"val": 36.13257814375329, "col": "blaney-criddle", "idx": 4}, {"val": 33.91381737837662, "col": "hargreaves", "idx": 4}, {"val": 35.5483021177334, "col": "thornthwait", "idx": 5}, {"val": 45.59640983035278, "col": "blaney-criddle", "idx": 5}, {"val": 42.48286940354163, "col": "hargreaves", "idx": 5}, {"val": 67.04057355171835, "col": "thornthwait", "idx": 6}, {"val": 56.03468951657525, "col": "blaney-criddle", "idx": 6}, {"val": 65.6589312437655, "col": "hargreaves", "idx": 6}, {"val": 74.94123764298526, "col": "thornthwait", "idx": 7}, {"val": 61.191489975395044, "col": "blaney-criddle", "idx": 7}, {"val": 73.27641284930597, "col": "hargreaves", "idx": 7}, {"val": 62.89907468084194, "col": "thornthwait", "idx": 8}, {"val": 54.70537471396046, "col": "blaney-criddle", "idx": 8}, {"val": 67.21657447926539, "col": "hargreaves", "idx": 8}, {"val": 40.258471324649925, "col": "thornthwait", "idx": 9}, {"val": 41.03142626534237, "col": "blaney-criddle", "idx": 9}, {"val": 51.15582391433297, "col": "hargreaves", "idx": 9}, {"val": 23.020011273578927, "col": "thornthwait", "idx": 10}, {"val": 33.42781501972594, "col": "blaney-criddle", "idx": 10}, {"val": 37.49198428459932, "col": "hargreaves", "idx": 10}, {"val": 9.921524890512528, "col": "thornthwait", "idx": 11}, {"val": 23.550322918149025, "col": "blaney-criddle", "idx": 11}, {"val": 23.217569424592828, "col": "hargreaves", "idx": 11}, {"val": 0.0, "col": "thornthwait", "idx": 12}, {"val": 16.46223502155269, "col": "blaney-criddle", "idx": 12}, {"val": 0.0, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_203019c71a754d12be4b7d63c94ed5c1);
+            
+            
+        
+    
+            var circle_marker_66752f4aa2bf4279988926219db1716c = L.circleMarker(
+                [38.574,-109.546],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_9121c7ccdc064ec3b8461a3e735232ff = L.popup({maxWidth: '650'});
+
+            
+                var vega_dcfd9151df9a4fda869057fdcb5b8658 = $('             <div id="vega_dcfd9151df9a4fda869057fdcb5b8658"></div>             ')[0];
+                popup_9121c7ccdc064ec3b8461a3e735232ff.setContent(vega_dcfd9151df9a4fda869057fdcb5b8658);
+            
+
+            circle_marker_66752f4aa2bf4279988926219db1716c.bindPopup(popup_9121c7ccdc064ec3b8461a3e735232ff);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 0.0, "col": "thornthwait", "idx": 1}, {"val": 17.20364265149876, "col": "blaney-criddle", "idx": 1}, {"val": 0.0, "col": "hargreaves", "idx": 1}, {"val": 2.1116075385196558, "col": "thornthwait", "idx": 2}, {"val": 18.837695786442385, "col": "blaney-criddle", "idx": 2}, {"val": 3.8131366478241944, "col": "hargreaves", "idx": 2}, {"val": 15.452955096567642, "col": "thornthwait", "idx": 3}, {"val": 33.613472287108785, "col": "blaney-criddle", "idx": 3}, {"val": 9.71523904376026, "col": "hargreaves", "idx": 3}, {"val": 25.389364183877444, "col": "thornthwait", "idx": 4}, {"val": 38.83045327830943, "col": "blaney-criddle", "idx": 4}, {"val": 11.95371243750889, "col": "hargreaves", "idx": 4}, {"val": 44.50568194068849, "col": "thornthwait", "idx": 5}, {"val": 51.28619402933451, "col": "blaney-criddle", "idx": 5}, {"val": 16.181029209075707, "col": "hargreaves", "idx": 5}, {"val": 83.43354139594311, "col": "thornthwait", "idx": 6}, {"val": 61.83288560994844, "col": "blaney-criddle", "idx": 6}, {"val": 23.57477781763942, "col": "hargreaves", "idx": 6}, {"val": 90.22894330712678, "col": "thornthwait", "idx": 7}, {"val": 66.36715072766751, "col": "blaney-criddle", "idx": 7}, {"val": 25.471800609507397, "col": "hargreaves", "idx": 7}, {"val": 70.62670555522566, "col": "thornthwait", "idx": 8}, {"val": 58.044859476445616, "col": "blaney-criddle", "idx": 8}, {"val": 22.573554740568973, "col": "hargreaves", "idx": 8}, {"val": 46.63164748983847, "col": "thornthwait", "idx": 9}, {"val": 44.51159941288344, "col": "blaney-criddle", "idx": 9}, {"val": 18.139114189984898, "col": "hargreaves", "idx": 9}, {"val": 29.541683512346047, "col": "thornthwait", "idx": 10}, {"val": 37.72879486797325, "col": "blaney-criddle", "idx": 10}, {"val": 14.76075248966746, "col": "hargreaves", "idx": 10}, {"val": 10.089685244499723, "col": "thornthwait", "idx": 11}, {"val": 25.047783571684842, "col": "blaney-criddle", "idx": 11}, {"val": 8.396332808779377, "col": "hargreaves", "idx": 11}, {"val": 0.8530401176427139, "col": "thornthwait", "idx": 12}, {"val": 18.56035130182223, "col": "blaney-criddle", "idx": 12}, {"val": 2.966556293420533, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_dcfd9151df9a4fda869057fdcb5b8658);
+            
+            
+        
+    
+            var circle_marker_c9e8699b5f6d41c1b1cc8d02bb05bb89 = L.circleMarker(
+                [38.9408,-77.4636],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_a62b19bce2d44628a559a0e2c3d30ef0 = L.popup({maxWidth: '650'});
+
+            
+                var vega_daaedf78357040919781dca5e5b0afc2 = $('             <div id="vega_daaedf78357040919781dca5e5b0afc2"></div>             ')[0];
+                popup_a62b19bce2d44628a559a0e2c3d30ef0.setContent(vega_daaedf78357040919781dca5e5b0afc2);
+            
+
+            circle_marker_c9e8699b5f6d41c1b1cc8d02bb05bb89.bindPopup(popup_a62b19bce2d44628a559a0e2c3d30ef0);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 0.0, "col": "thornthwait", "idx": 1}, {"val": 16.951091884585704, "col": "blaney-criddle", "idx": 1}, {"val": 0.0, "col": "hargreaves", "idx": 1}, {"val": 1.7014926052210793, "col": "thornthwait", "idx": 2}, {"val": 18.166712926351355, "col": "blaney-criddle", "idx": 2}, {"val": 1.0411526102541309, "col": "hargreaves", "idx": 2}, {"val": 15.927063973802118, "col": "thornthwait", "idx": 3}, {"val": 33.36644035233674, "col": "blaney-criddle", "idx": 3}, {"val": 3.0157598222349455, "col": "hargreaves", "idx": 3}, {"val": 22.472764317896033, "col": "thornthwait", "idx": 4}, {"val": 37.13713438537941, "col": "blaney-criddle", "idx": 4}, {"val": 3.4162561845817274, "col": "hargreaves", "idx": 4}, {"val": 40.0257641346474, "col": "thornthwait", "idx": 5}, {"val": 49.237024719403294, "col": "blaney-criddle", "idx": 5}, {"val": 4.686885083666882, "col": "hargreaves", "idx": 5}, {"val": 65.59135190734507, "col": "thornthwait", "idx": 6}, {"val": 56.5405628441653, "col": "blaney-criddle", "idx": 6}, {"val": 6.27371573448731, "col": "hargreaves", "idx": 6}, {"val": 83.31516193948463, "col": "thornthwait", "idx": 7}, {"val": 64.4706092187132, "col": "blaney-criddle", "idx": 7}, {"val": 7.594445179630599, "col": "hargreaves", "idx": 7}, {"val": 77.76635393128032, "col": "thornthwait", "idx": 8}, {"val": 60.17685254347027, "col": "blaney-criddle", "idx": 8}, {"val": 7.594445179630599, "col": "hargreaves", "idx": 8}, {"val": 54.18971997750167, "col": "thornthwait", "idx": 9}, {"val": 46.71221401601494, "col": "blaney-criddle", "idx": 9}, {"val": 6.27371573448731, "col": "hargreaves", "idx": 9}, {"val": 26.81845085016822, "col": "thornthwait", "idx": 10}, {"val": 36.24468604911492, "col": "blaney-criddle", "idx": 10}, {"val": 4.302367978818191, "col": "hargreaves", "idx": 10}, {"val": 9.884523172797973, "col": "thornthwait", "idx": 11}, {"val": 24.50776485461569, "col": "blaney-criddle", "idx": 11}, {"val": 2.529512791029186, "col": "hargreaves", "idx": 11}, {"val": 2.37741570894387, "col": "thornthwait", "idx": 12}, {"val": 19.895915885503793, "col": "blaney-criddle", "idx": 12}, {"val": 1.332555924046435, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_daaedf78357040919781dca5e5b0afc2);
+            
+            
+        
+    
+            var circle_marker_1c2e9be815434c41ab4582316c1ba52f = L.circleMarker(
+                [39.1342,-108.54],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_368a6592671a48d0b7e4d6ef9e78ede0 = L.popup({maxWidth: '650'});
+
+            
+                var vega_ff03cff0bb7e4735b1619f5c26234a66 = $('             <div id="vega_ff03cff0bb7e4735b1619f5c26234a66"></div>             ')[0];
+                popup_368a6592671a48d0b7e4d6ef9e78ede0.setContent(vega_ff03cff0bb7e4735b1619f5c26234a66);
+            
+
+            circle_marker_1c2e9be815434c41ab4582316c1ba52f.bindPopup(popup_368a6592671a48d0b7e4d6ef9e78ede0);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 0.0, "col": "thornthwait", "idx": 1}, {"val": 12.950199867418512, "col": "blaney-criddle", "idx": 1}, {"val": 0.0, "col": "hargreaves", "idx": 1}, {"val": 0.09733172587360156, "col": "thornthwait", "idx": 2}, {"val": 15.92592595656357, "col": "blaney-criddle", "idx": 2}, {"val": 0.9649465716294185, "col": "hargreaves", "idx": 2}, {"val": 10.877700669946858, "col": "thornthwait", "idx": 3}, {"val": 29.66487599139691, "col": "blaney-criddle", "idx": 3}, {"val": 7.228929421442549, "col": "hargreaves", "idx": 3}, {"val": 19.10327840743718, "col": "thornthwait", "idx": 4}, {"val": 34.554755097757976, "col": "blaney-criddle", "idx": 4}, {"val": 9.325785149613868, "col": "hargreaves", "idx": 4}, {"val": 36.96402472630447, "col": "thornthwait", "idx": 5}, {"val": 46.98985085973225, "col": "blaney-criddle", "idx": 5}, {"val": 13.689487859546329, "col": "hargreaves", "idx": 5}, {"val": 75.11519992310433, "col": "thornthwait", "idx": 6}, {"val": 59.273984424329306, "col": "blaney-criddle", "idx": 6}, {"val": 22.02747389750908, "col": "hargreaves", "idx": 6}, {"val": 82.26677369383916, "col": "thornthwait", "idx": 7}, {"val": 64.109286937794, "col": "blaney-criddle", "idx": 7}, {"val": 24.168656073412617, "col": "hargreaves", "idx": 7}, {"val": 66.98352723685903, "col": "thornthwait", "idx": 8}, {"val": 56.533747630491874, "col": "blaney-criddle", "idx": 8}, {"val": 21.771582494841592, "col": "hargreaves", "idx": 8}, {"val": 44.71800690874449, "col": "thornthwait", "idx": 9}, {"val": 43.02298103427518, "col": "blaney-criddle", "idx": 9}, {"val": 17.267399081648655, "col": "hargreaves", "idx": 9}, {"val": 26.470443739759222, "col": "thornthwait", "idx": 10}, {"val": 35.227133178846245, "col": "blaney-criddle", "idx": 10}, {"val": 13.080994975600575, "col": "hargreaves", "idx": 10}, {"val": 8.573070577596038, "col": "thornthwait", "idx": 11}, {"val": 22.984006407919495, "col": "blaney-criddle", "idx": 11}, {"val": 6.919198820271138, "col": "hargreaves", "idx": 11}, {"val": 0.0, "col": "thornthwait", "idx": 12}, {"val": 15.54042834026992, "col": "blaney-criddle", "idx": 12}, {"val": 0.0, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_ff03cff0bb7e4735b1619f5c26234a66);
+            
+            
+        
+    
+            var circle_marker_b2d038d07c5d4583b7c3d733abc212d9 = L.circleMarker(
+                [40.246,-111.651],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_04bfb9e8c7ab44eaa6d56e8d53d6e90d = L.popup({maxWidth: '650'});
+
+            
+                var vega_9b3a385563704a2988f80a1045b9308f = $('             <div id="vega_9b3a385563704a2988f80a1045b9308f"></div>             ')[0];
+                popup_04bfb9e8c7ab44eaa6d56e8d53d6e90d.setContent(vega_9b3a385563704a2988f80a1045b9308f);
+            
+
+            circle_marker_b2d038d07c5d4583b7c3d733abc212d9.bindPopup(popup_04bfb9e8c7ab44eaa6d56e8d53d6e90d);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 0.0, "col": "thornthwait", "idx": 1}, {"val": 16.643683354083, "col": "blaney-criddle", "idx": 1}, {"val": 0.0, "col": "hargreaves", "idx": 1}, {"val": 0.883222221574749, "col": "thornthwait", "idx": 2}, {"val": 17.02402547421448, "col": "blaney-criddle", "idx": 2}, {"val": 9.157006664011725, "col": "hargreaves", "idx": 2}, {"val": 14.714377956481728, "col": "thornthwait", "idx": 3}, {"val": 32.38242306890037, "col": "blaney-criddle", "idx": 3}, {"val": 33.55232117536054, "col": "hargreaves", "idx": 3}, {"val": 24.794119749809106, "col": "thornthwait", "idx": 4}, {"val": 37.90275203102261, "col": "blaney-criddle", "idx": 4}, {"val": 42.24585391012501, "col": "hargreaves", "idx": 4}, {"val": 38.991919990345494, "col": "thornthwait", "idx": 5}, {"val": 48.73861246209708, "col": "blaney-criddle", "idx": 5}, {"val": 53.9106803069988, "col": "hargreaves", "idx": 5}, {"val": 76.53438687902242, "col": "thornthwait", "idx": 6}, {"val": 60.16237457780334, "col": "blaney-criddle", "idx": 6}, {"val": 82.57934901005257, "col": "hargreaves", "idx": 6}, {"val": 85.50475119980644, "col": "thornthwait", "idx": 7}, {"val": 65.44951071279809, "col": "blaney-criddle", "idx": 7}, {"val": 91.68826660763003, "col": "hargreaves", "idx": 7}, {"val": 72.10809325984194, "col": "thornthwait", "idx": 8}, {"val": 58.57237210817917, "col": "blaney-criddle", "idx": 8}, {"val": 85.33199397705431, "col": "hargreaves", "idx": 8}, {"val": 43.225601073138996, "col": "thornthwait", "idx": 9}, {"val": 42.93085238346218, "col": "blaney-criddle", "idx": 9}, {"val": 63.55998983218964, "col": "hargreaves", "idx": 9}, {"val": 27.103126146683167, "col": "thornthwait", "idx": 10}, {"val": 35.95672198667313, "col": "blaney-criddle", "idx": 10}, {"val": 50.97796470587272, "col": "hargreaves", "idx": 10}, {"val": 10.102946166899752, "col": "thornthwait", "idx": 11}, {"val": 24.14546676887574, "col": "blaney-criddle", "idx": 11}, {"val": 29.875200873972236, "col": "hargreaves", "idx": 11}, {"val": 0.0, "col": "thornthwait", "idx": 12}, {"val": 16.271598469575505, "col": "blaney-criddle", "idx": 12}, {"val": 0.0, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_9b3a385563704a2988f80a1045b9308f);
+            
+            
+        
+    
+            var circle_marker_2d87fc860fed4687a19e666fef068df5 = L.circleMarker(
+                [40.44,-109.536],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_d1603e53638a4ad1a3dd80ce5df5d758 = L.popup({maxWidth: '650'});
+
+            
+                var vega_472c9c6267d1433ca048c395e8bb4c03 = $('             <div id="vega_472c9c6267d1433ca048c395e8bb4c03"></div>             ')[0];
+                popup_d1603e53638a4ad1a3dd80ce5df5d758.setContent(vega_472c9c6267d1433ca048c395e8bb4c03);
+            
+
+            circle_marker_2d87fc860fed4687a19e666fef068df5.bindPopup(popup_d1603e53638a4ad1a3dd80ce5df5d758);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 0.0, "col": "thornthwait", "idx": 1}, {"val": 8.197727573704688, "col": "blaney-criddle", "idx": 1}, {"val": 0.0, "col": "hargreaves", "idx": 1}, {"val": 0.0, "col": "thornthwait", "idx": 2}, {"val": 12.787141687481105, "col": "blaney-criddle", "idx": 2}, {"val": 0.0, "col": "hargreaves", "idx": 2}, {"val": 7.86240893518332, "col": "thornthwait", "idx": 3}, {"val": 26.062910963811838, "col": "blaney-criddle", "idx": 3}, {"val": 18.38700264829434, "col": "hargreaves", "idx": 3}, {"val": 19.16445705217676, "col": "thornthwait", "idx": 4}, {"val": 32.449137006245095, "col": "blaney-criddle", "idx": 4}, {"val": 29.968438026471837, "col": "hargreaves", "idx": 4}, {"val": 31.876075459961722, "col": "thornthwait", "idx": 5}, {"val": 42.56321232825087, "col": "blaney-criddle", "idx": 5}, {"val": 41.15082623133006, "col": "hargreaves", "idx": 5}, {"val": 64.53596667566505, "col": "thornthwait", "idx": 6}, {"val": 54.8812768587004, "col": "blaney-criddle", "idx": 6}, {"val": 70.86890311969294, "col": "hargreaves", "idx": 6}, {"val": 70.43052342993201, "col": "thornthwait", "idx": 7}, {"val": 59.47689060128472, "col": "blaney-criddle", "idx": 7}, {"val": 78.32478245006807, "col": "hargreaves", "idx": 7}, {"val": 59.08663718044523, "col": "thornthwait", "idx": 8}, {"val": 52.7123645275579, "col": "blaney-criddle", "idx": 8}, {"val": 71.43474764286394, "col": "hargreaves", "idx": 8}, {"val": 36.2626765569585, "col": "thornthwait", "idx": 9}, {"val": 38.19959180756386, "col": "blaney-criddle", "idx": 9}, {"val": 51.41876219003262, "col": "hargreaves", "idx": 9}, {"val": 20.998979900009715, "col": "thornthwait", "idx": 10}, {"val": 30.777146529830798, "col": "blaney-criddle", "idx": 10}, {"val": 37.08765638349368, "col": "hargreaves", "idx": 10}, {"val": 5.561434406264709, "col": "thornthwait", "idx": 11}, {"val": 19.700784673450904, "col": "blaney-criddle", "idx": 11}, {"val": 16.617616148409137, "col": "hargreaves", "idx": 11}, {"val": 0.0, "col": "thornthwait", "idx": 12}, {"val": 11.800518464286325, "col": "blaney-criddle", "idx": 12}, {"val": 0.0, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_472c9c6267d1433ca048c395e8bb4c03);
+            
+            
+        
+    
+            var circle_marker_719e9d092a954fdab4d878e6b3375e89 = L.circleMarker(
+                [40.8289,-115.789],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_4ac8fc81c4cc4a0fbdde3dbe0b002673 = L.popup({maxWidth: '650'});
+
+            
+                var vega_03b76b5a7d8f4c45896299de26b52f52 = $('             <div id="vega_03b76b5a7d8f4c45896299de26b52f52"></div>             ')[0];
+                popup_4ac8fc81c4cc4a0fbdde3dbe0b002673.setContent(vega_03b76b5a7d8f4c45896299de26b52f52);
+            
+
+            circle_marker_719e9d092a954fdab4d878e6b3375e89.bindPopup(popup_4ac8fc81c4cc4a0fbdde3dbe0b002673);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 0.0, "col": "thornthwait", "idx": 1}, {"val": 12.260962100709355, "col": "blaney-criddle", "idx": 1}, {"val": 0.0, "col": "hargreaves", "idx": 1}, {"val": 0.0, "col": "thornthwait", "idx": 2}, {"val": 14.498021807996809, "col": "blaney-criddle", "idx": 2}, {"val": 0.0, "col": "hargreaves", "idx": 2}, {"val": 11.914748862881968, "col": "thornthwait", "idx": 3}, {"val": 28.31876391866821, "col": "blaney-criddle", "idx": 3}, {"val": 22.424034608525435, "col": "hargreaves", "idx": 3}, {"val": 21.824952726488124, "col": "thornthwait", "idx": 4}, {"val": 33.8581519656202, "col": "blaney-criddle", "idx": 4}, {"val": 30.933919223984645, "col": "hargreaves", "idx": 4}, {"val": 34.1342526428544, "col": "thornthwait", "idx": 5}, {"val": 43.822834872453875, "col": "blaney-criddle", "idx": 5}, {"val": 40.69570454213153, "col": "hargreaves", "idx": 5}, {"val": 60.172908810037, "col": "thornthwait", "idx": 6}, {"val": 53.33672615182826, "col": "blaney-criddle", "idx": 6}, {"val": 62.14658876258506, "col": "hargreaves", "idx": 6}, {"val": 68.95568145861883, "col": "thornthwait", "idx": 7}, {"val": 59.03589953663886, "col": "blaney-criddle", "idx": 7}, {"val": 71.59577839445953, "col": "hargreaves", "idx": 7}, {"val": 60.9981732494112, "col": "thornthwait", "idx": 8}, {"val": 53.62282449448216, "col": "blaney-criddle", "idx": 8}, {"val": 68.55158421187186, "col": "hargreaves", "idx": 8}, {"val": 36.246043887677125, "col": "thornthwait", "idx": 9}, {"val": 38.322565794945184, "col": "blaney-criddle", "idx": 9}, {"val": 48.197063638128355, "col": "hargreaves", "idx": 9}, {"val": 20.194456501060774, "col": "thornthwait", "idx": 10}, {"val": 30.511419391082935, "col": "blaney-criddle", "idx": 10}, {"val": 33.97105651236711, "col": "hargreaves", "idx": 10}, {"val": 7.103674327407243, "col": "thornthwait", "idx": 11}, {"val": 20.54718151673237, "col": "blaney-criddle", "idx": 11}, {"val": 18.202856915015403, "col": "hargreaves", "idx": 11}, {"val": 0.0, "col": "thornthwait", "idx": 12}, {"val": 12.389955152632421, "col": "blaney-criddle", "idx": 12}, {"val": 0.0, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_03b76b5a7d8f4c45896299de26b52f52);
+            
+            
+        
+    
+            var circle_marker_51d586b1dfc245b0a602dd0d7f535a78 = L.circleMarker(
+                [41.616,-112.544],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_950222d1696e40cdb857f2140b6902de = L.popup({maxWidth: '650'});
+
+            
+                var vega_cd344d43b9a041a492e7b2dc4c0ec648 = $('             <div id="vega_cd344d43b9a041a492e7b2dc4c0ec648"></div>             ')[0];
+                popup_950222d1696e40cdb857f2140b6902de.setContent(vega_cd344d43b9a041a492e7b2dc4c0ec648);
+            
+
+            circle_marker_51d586b1dfc245b0a602dd0d7f535a78.bindPopup(popup_950222d1696e40cdb857f2140b6902de);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 0.0, "col": "thornthwait", "idx": 1}, {"val": 11.87819652305766, "col": "blaney-criddle", "idx": 1}, {"val": 0.0, "col": "hargreaves", "idx": 1}, {"val": 0.0, "col": "thornthwait", "idx": 2}, {"val": 14.320450138920041, "col": "blaney-criddle", "idx": 2}, {"val": 0.0, "col": "hargreaves", "idx": 2}, {"val": 8.868949160558566, "col": "thornthwait", "idx": 3}, {"val": 26.754643090818814, "col": "blaney-criddle", "idx": 3}, {"val": 7.763605597047163, "col": "hargreaves", "idx": 3}, {"val": 20.937736722600114, "col": "thornthwait", "idx": 4}, {"val": 33.566019006494514, "col": "blaney-criddle", "idx": 4}, {"val": 12.426580722932771, "col": "hargreaves", "idx": 4}, {"val": 32.20473986318256, "col": "thornthwait", "idx": 5}, {"val": 43.15462122354306, "col": "blaney-criddle", "idx": 5}, {"val": 16.06439360818861, "col": "hargreaves", "idx": 5}, {"val": 62.60446027896868, "col": "thornthwait", "idx": 6}, {"val": 54.500334958485524, "col": "blaney-criddle", "idx": 6}, {"val": 26.445927442254916, "col": "hargreaves", "idx": 6}, {"val": 74.12865003639727, "col": "thornthwait", "idx": 7}, {"val": 61.28004016041689, "col": "blaney-criddle", "idx": 7}, {"val": 31.391956898895632, "col": "hargreaves", "idx": 7}, {"val": 62.50385289462781, "col": "thornthwait", "idx": 8}, {"val": 54.3529043864181, "col": "blaney-criddle", "idx": 8}, {"val": 28.851033110158, "col": "hargreaves", "idx": 8}, {"val": 35.320028664826246, "col": "thornthwait", "idx": 9}, {"val": 37.99126989258665, "col": "blaney-criddle", "idx": 9}, {"val": 19.522242419070558, "col": "hargreaves", "idx": 9}, {"val": 20.02726184479507, "col": "thornthwait", "idx": 10}, {"val": 30.415627087229353, "col": "blaney-criddle", "idx": 10}, {"val": 14.021436963209561, "col": "hargreaves", "idx": 10}, {"val": 6.126481266407698, "col": "thornthwait", "idx": 11}, {"val": 19.946646029828973, "col": "blaney-criddle", "idx": 11}, {"val": 6.9537723527723365, "col": "hargreaves", "idx": 11}, {"val": 0.0, "col": "thornthwait", "idx": 12}, {"val": 11.269807313840177, "col": "blaney-criddle", "idx": 12}, {"val": 0.0, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_cd344d43b9a041a492e7b2dc4c0ec648);
+            
+            
+        
+    
+            var circle_marker_3550154323c34de58450e30a15f25396 = L.circleMarker(
+                [41.746,-111.803],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_3e1e978578624b5a80d32b640edd0e44 = L.popup({maxWidth: '650'});
+
+            
+                var vega_d899f7ed29a941469303a0d6bd2cecf1 = $('             <div id="vega_d899f7ed29a941469303a0d6bd2cecf1"></div>             ')[0];
+                popup_3e1e978578624b5a80d32b640edd0e44.setContent(vega_d899f7ed29a941469303a0d6bd2cecf1);
+            
+
+            circle_marker_3550154323c34de58450e30a15f25396.bindPopup(popup_3e1e978578624b5a80d32b640edd0e44);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 0.0, "col": "thornthwait", "idx": 1}, {"val": 12.144918113515175, "col": "blaney-criddle", "idx": 1}, {"val": 0.0, "col": "hargreaves", "idx": 1}, {"val": 0.0, "col": "thornthwait", "idx": 2}, {"val": 14.131664871915346, "col": "blaney-criddle", "idx": 2}, {"val": 0.0, "col": "hargreaves", "idx": 2}, {"val": 9.062791044029792, "col": "thornthwait", "idx": 3}, {"val": 27.347209518581824, "col": "blaney-criddle", "idx": 3}, {"val": 5.571571548623419, "col": "hargreaves", "idx": 3}, {"val": 22.64917703917734, "col": "thornthwait", "idx": 4}, {"val": 34.95418348315651, "col": "blaney-criddle", "idx": 4}, {"val": 9.143496235746696, "col": "hargreaves", "idx": 4}, {"val": 34.31895176077707, "col": "thornthwait", "idx": 5}, {"val": 44.795115762149294, "col": "blaney-criddle", "idx": 5}, {"val": 11.634566062939442, "col": "hargreaves", "idx": 5}, {"val": 63.59913888260497, "col": "thornthwait", "idx": 6}, {"val": 55.26576920883308, "col": "blaney-criddle", "idx": 6}, {"val": 18.116662221833895, "col": "hargreaves", "idx": 6}, {"val": 74.43285296696601, "col": "thornthwait", "idx": 7}, {"val": 61.631581836105966, "col": "blaney-criddle", "idx": 7}, {"val": 21.166549521944496, "col": "hargreaves", "idx": 7}, {"val": 64.65413126057126, "col": "thornthwait", "idx": 8}, {"val": 55.48798881875222, "col": "blaney-criddle", "idx": 8}, {"val": 20.02737835258127, "col": "hargreaves", "idx": 8}, {"val": 38.1536040107578, "col": "thornthwait", "idx": 9}, {"val": 39.611868402356244, "col": "blaney-criddle", "idx": 9}, {"val": 14.210188690731503, "col": "hargreaves", "idx": 9}, {"val": 21.9713469404569, "col": "thornthwait", "idx": 10}, {"val": 31.81736785238526, "col": "blaney-criddle", "idx": 10}, {"val": 10.409846792914808, "col": "hargreaves", "idx": 10}, {"val": 8.161503670023906, "col": "thornthwait", "idx": 11}, {"val": 21.373219361049276, "col": "blaney-criddle", "idx": 11}, {"val": 5.836623911232027, "col": "hargreaves", "idx": 11}, {"val": 0.0, "col": "thornthwait", "idx": 12}, {"val": 12.160856213501313, "col": "blaney-criddle", "idx": 12}, {"val": 0.0, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_d899f7ed29a941469303a0d6bd2cecf1);
+            
+            
+        
+    
+            var circle_marker_b6289ee13eda4e4ba74a230a34a901cd = L.circleMarker(
+                [43.0308,-108.374],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_27461dddb290479fa955c622d6126b27 = L.popup({maxWidth: '650'});
+
+            
+                var vega_4fa368eca366435abecbc9cb923a3913 = $('             <div id="vega_4fa368eca366435abecbc9cb923a3913"></div>             ')[0];
+                popup_27461dddb290479fa955c622d6126b27.setContent(vega_4fa368eca366435abecbc9cb923a3913);
+            
+
+            circle_marker_b6289ee13eda4e4ba74a230a34a901cd.bindPopup(popup_27461dddb290479fa955c622d6126b27);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 0.0, "col": "thornthwait", "idx": 1}, {"val": 7.789698954192173, "col": "blaney-criddle", "idx": 1}, {"val": 0.0, "col": "hargreaves", "idx": 1}, {"val": 0.0, "col": "thornthwait", "idx": 2}, {"val": 14.324060019524067, "col": "blaney-criddle", "idx": 2}, {"val": 0.0, "col": "hargreaves", "idx": 2}, {"val": 7.6216680857105406, "col": "thornthwait", "idx": 3}, {"val": 25.53643361972904, "col": "blaney-criddle", "idx": 3}, {"val": 16.13573030962035, "col": "hargreaves", "idx": 3}, {"val": 18.72259595829662, "col": "thornthwait", "idx": 4}, {"val": 31.961541786471884, "col": "blaney-criddle", "idx": 4}, {"val": 26.514894571104414, "col": "hargreaves", "idx": 4}, {"val": 31.66689593963562, "col": "thornthwait", "idx": 5}, {"val": 42.35660077880064, "col": "blaney-criddle", "idx": 5}, {"val": 36.89796454526881, "col": "hargreaves", "idx": 5}, {"val": 63.98083814851884, "col": "thornthwait", "idx": 6}, {"val": 54.944893383777796, "col": "blaney-criddle", "idx": 6}, {"val": 64.30997525105346, "col": "hargreaves", "idx": 6}, {"val": 70.3765913303833, "col": "thornthwait", "idx": 7}, {"val": 59.7735061663529, "col": "blaney-criddle", "idx": 7}, {"val": 71.8806688547774, "col": "hargreaves", "idx": 7}, {"val": 57.12196827130176, "col": "thornthwait", "idx": 8}, {"val": 51.910038670352264, "col": "blaney-criddle", "idx": 8}, {"val": 63.783369467712525, "col": "hargreaves", "idx": 8}, {"val": 36.12427168720697, "col": "thornthwait", "idx": 9}, {"val": 37.78836432032504, "col": "blaney-criddle", "idx": 9}, {"val": 47.11097703756235, "col": "hargreaves", "idx": 9}, {"val": 19.340790762025993, "col": "thornthwait", "idx": 10}, {"val": 29.369391754469483, "col": "blaney-criddle", "idx": 10}, {"val": 31.957728872527273, "col": "hargreaves", "idx": 10}, {"val": 3.0351542573209183, "col": "thornthwait", "idx": 11}, {"val": 17.708493584517694, "col": "blaney-criddle", "idx": 11}, {"val": 10.694620094791407, "col": "hargreaves", "idx": 11}, {"val": 0.0, "col": "thornthwait", "idx": 12}, {"val": 6.773535923610016, "col": "blaney-criddle", "idx": 12}, {"val": 0.0, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_4fa368eca366435abecbc9cb923a3913);
+            
+            
+        
+    
+            var circle_marker_276c414952e6414fb0d22edbed6ddffc = L.circleMarker(
+                [43.5317,-112.942],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_f293b0ae91d3423ea5de1413a1b1a669 = L.popup({maxWidth: '650'});
+
+            
+                var vega_8e6da6748c5941119efe9bd9ddf4dc17 = $('             <div id="vega_8e6da6748c5941119efe9bd9ddf4dc17"></div>             ')[0];
+                popup_f293b0ae91d3423ea5de1413a1b1a669.setContent(vega_8e6da6748c5941119efe9bd9ddf4dc17);
+            
+
+            circle_marker_276c414952e6414fb0d22edbed6ddffc.bindPopup(popup_f293b0ae91d3423ea5de1413a1b1a669);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 0.0, "col": "thornthwait", "idx": 1}, {"val": 7.652852175127863, "col": "blaney-criddle", "idx": 1}, {"val": 0.0, "col": "hargreaves", "idx": 1}, {"val": 0.0, "col": "thornthwait", "idx": 2}, {"val": 9.813984465217874, "col": "blaney-criddle", "idx": 2}, {"val": 0.0, "col": "hargreaves", "idx": 2}, {"val": 5.387244432967467, "col": "thornthwait", "idx": 3}, {"val": 23.86210958963256, "col": "blaney-criddle", "idx": 3}, {"val": 14.154376062313316, "col": "hargreaves", "idx": 3}, {"val": 22.41358682873827, "col": "thornthwait", "idx": 4}, {"val": 32.89394009461411, "col": "blaney-criddle", "idx": 4}, {"val": 33.562825268768144, "col": "hargreaves", "idx": 4}, {"val": 33.1542513797285, "col": "thornthwait", "idx": 5}, {"val": 42.19662768304592, "col": "blaney-criddle", "idx": 5}, {"val": 42.857702460650366, "col": "hargreaves", "idx": 5}, {"val": 57.64464581313423, "col": "thornthwait", "idx": 6}, {"val": 51.83710440170405, "col": "blaney-criddle", "idx": 6}, {"val": 67.22510595120484, "col": "hargreaves", "idx": 6}, {"val": 64.32985279930593, "col": "thornthwait", "idx": 7}, {"val": 56.818136415095495, "col": "blaney-criddle", "idx": 7}, {"val": 76.46109924900455, "col": "hargreaves", "idx": 7}, {"val": 56.24266496837306, "col": "thornthwait", "idx": 8}, {"val": 51.051906194556274, "col": "blaney-criddle", "idx": 8}, {"val": 72.55349851613, "col": "hargreaves", "idx": 8}, {"val": 33.91380848593295, "col": "thornthwait", "idx": 9}, {"val": 36.179087270722555, "col": "blaney-criddle", "idx": 9}, {"val": 50.686511610193044, "col": "hargreaves", "idx": 9}, {"val": 16.59719420915185, "col": "thornthwait", "idx": 10}, {"val": 27.35765713657377, "col": "blaney-criddle", "idx": 10}, {"val": 31.671909843072203, "col": "hargreaves", "idx": 10}, {"val": 2.897924794012959, "col": "thornthwait", "idx": 11}, {"val": 17.2636747672871, "col": "blaney-criddle", "idx": 11}, {"val": 11.128903398854053, "col": "hargreaves", "idx": 11}, {"val": 0.0, "col": "thornthwait", "idx": 12}, {"val": 5.306514553418581, "col": "blaney-criddle", "idx": 12}, {"val": 0.0, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_8e6da6748c5941119efe9bd9ddf4dc17);
+            
+            
+        
+    
+            var circle_marker_8810af42c3d44de281d620a9f29f6a33 = L.circleMarker(
+                [44.0567,-121.285],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_b30f54c901a84682b8bb5104e1113998 = L.popup({maxWidth: '650'});
+
+            
+                var vega_1234a10d9ccb486085b65e19f43fee29 = $('             <div id="vega_1234a10d9ccb486085b65e19f43fee29"></div>             ')[0];
+                popup_b30f54c901a84682b8bb5104e1113998.setContent(vega_1234a10d9ccb486085b65e19f43fee29);
+            
+
+            circle_marker_8810af42c3d44de281d620a9f29f6a33.bindPopup(popup_b30f54c901a84682b8bb5104e1113998);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 1.102766649955983, "col": "thornthwait", "idx": 1}, {"val": 16.89067852404018, "col": "blaney-criddle", "idx": 1}, {"val": 6.278303066031015, "col": "hargreaves", "idx": 1}, {"val": 9.23277212781185, "col": "thornthwait", "idx": 2}, {"val": 19.473382501532317, "col": "blaney-criddle", "idx": 2}, {"val": 19.215309014884504, "col": "hargreaves", "idx": 2}, {"val": 10.579655142617723, "col": "thornthwait", "idx": 3}, {"val": 26.46607840244488, "col": "blaney-criddle", "idx": 3}, {"val": 19.48715600306866, "col": "hargreaves", "idx": 3}, {"val": 26.759691920053836, "col": "thornthwait", "idx": 4}, {"val": 34.9659912834, "col": "blaney-criddle", "idx": 4}, {"val": 34.80534786877217, "col": "hargreaves", "idx": 4}, {"val": 34.67368315009149, "col": "thornthwait", "idx": 5}, {"val": 43.081157304149286, "col": "blaney-criddle", "idx": 5}, {"val": 39.99049730079787, "col": "hargreaves", "idx": 5}, {"val": 46.99223470037741, "col": "thornthwait", "idx": 6}, {"val": 47.41067768298629, "col": "blaney-criddle", "idx": 6}, {"val": 49.86554406503247, "col": "hargreaves", "idx": 6}, {"val": 55.22739451005029, "col": "thornthwait", "idx": 7}, {"val": 52.945187410579976, "col": "blaney-criddle", "idx": 7}, {"val": 59.21772184959377, "col": "hargreaves", "idx": 7}, {"val": 54.04370472069441, "col": "thornthwait", "idx": 8}, {"val": 50.19693191351652, "col": "blaney-criddle", "idx": 8}, {"val": 62.64036425364711, "col": "hargreaves", "idx": 8}, {"val": 33.49931572222816, "col": "thornthwait", "idx": 9}, {"val": 36.07388641412788, "col": "blaney-criddle", "idx": 9}, {"val": 45.143196814769965, "col": "hargreaves", "idx": 9}, {"val": 19.183480638594258, "col": "thornthwait", "idx": 10}, {"val": 28.590535902480678, "col": "blaney-criddle", "idx": 10}, {"val": 32.00696540327145, "col": "hargreaves", "idx": 10}, {"val": 11.976408793757457, "col": "thornthwait", "idx": 11}, {"val": 21.51402186553564, "col": "blaney-criddle", "idx": 11}, {"val": 24.606105554803477, "col": "hargreaves", "idx": 11}, {"val": 0.0, "col": "thornthwait", "idx": 12}, {"val": 12.234223245771258, "col": "blaney-criddle", "idx": 12}, {"val": 0.0, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_1234a10d9ccb486085b65e19f43fee29);
+            
+            
+        
+    
+            var circle_marker_8721d1fb1f724e84a44fa927d6ec3a86 = L.circleMarker(
+                [46.9244,-114.091],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_6c4c4645ee134a7d98c48edbb8250646 = L.popup({maxWidth: '650'});
+
+            
+                var vega_a3cdb44b0f7b41b2ba07803ef0a75373 = $('             <div id="vega_a3cdb44b0f7b41b2ba07803ef0a75373"></div>             ')[0];
+                popup_6c4c4645ee134a7d98c48edbb8250646.setContent(vega_a3cdb44b0f7b41b2ba07803ef0a75373);
+            
+
+            circle_marker_8721d1fb1f724e84a44fa927d6ec3a86.bindPopup(popup_6c4c4645ee134a7d98c48edbb8250646);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 0.0, "col": "thornthwait", "idx": 1}, {"val": 12.825479250548337, "col": "blaney-criddle", "idx": 1}, {"val": 0.0, "col": "hargreaves", "idx": 1}, {"val": 3.2439122459149203, "col": "thornthwait", "idx": 2}, {"val": 16.45614371721114, "col": "blaney-criddle", "idx": 2}, {"val": 13.23224981716166, "col": "hargreaves", "idx": 2}, {"val": 10.058221242229225, "col": "thornthwait", "idx": 3}, {"val": 26.51969503355785, "col": "blaney-criddle", "idx": 3}, {"val": 24.089482200456665, "col": "hargreaves", "idx": 3}, {"val": 27.988541996925203, "col": "thornthwait", "idx": 4}, {"val": 36.21191881113621, "col": "blaney-criddle", "idx": 4}, {"val": 44.919352736571234, "col": "hargreaves", "idx": 4}, {"val": 38.502432042910485, "col": "thornthwait", "idx": 5}, {"val": 45.89975927095071, "col": "blaney-criddle", "idx": 5}, {"val": 53.67817201952014, "col": "hargreaves", "idx": 5}, {"val": 56.5006873024457, "col": "thornthwait", "idx": 6}, {"val": 52.584848871390946, "col": "blaney-criddle", "idx": 6}, {"val": 71.3790173780193, "col": "hargreaves", "idx": 6}, {"val": 64.06227602619097, "col": "thornthwait", "idx": 7}, {"val": 57.82452880390521, "col": "blaney-criddle", "idx": 7}, {"val": 82.19783876325582, "col": "hargreaves", "idx": 7}, {"val": 58.57590528509628, "col": "thornthwait", "idx": 8}, {"val": 52.87236627353194, "col": "blaney-criddle", "idx": 8}, {"val": 82.19783876325582, "col": "hargreaves", "idx": 8}, {"val": 33.72255968491279, "col": "thornthwait", "idx": 9}, {"val": 36.59830599978036, "col": "blaney-criddle", "idx": 9}, {"val": 56.48358339655849, "col": "hargreaves", "idx": 9}, {"val": 15.608414876109558, "col": "thornthwait", "idx": 10}, {"val": 27.034888591012006, "col": "blaney-criddle", "idx": 10}, {"val": 34.94471967636844, "col": "hargreaves", "idx": 10}, {"val": 5.604570791902678, "col": "thornthwait", "idx": 11}, {"val": 18.261185867879245, "col": "blaney-criddle", "idx": 11}, {"val": 19.405310784533548, "col": "hargreaves", "idx": 11}, {"val": 0.0, "col": "thornthwait", "idx": 12}, {"val": 9.091236490097549, "col": "blaney-criddle", "idx": 12}, {"val": 0.0, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_a3cdb44b0f7b41b2ba07803ef0a75373);
+            
+            
+        
+    
+            var circle_marker_b8c2404d69a44087b1842e53444276ca = L.circleMarker(
+                [47.6872,-122.255],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_4d1b9280305d42878e5f9b90eeaf0884 = L.popup({maxWidth: '650'});
+
+            
+                var vega_255ce5b410624f50a63e2df39abbc5d8 = $('             <div id="vega_255ce5b410624f50a63e2df39abbc5d8"></div>             ')[0];
+                popup_4d1b9280305d42878e5f9b90eeaf0884.setContent(vega_255ce5b410624f50a63e2df39abbc5d8);
+            
+
+            circle_marker_b8c2404d69a44087b1842e53444276ca.bindPopup(popup_4d1b9280305d42878e5f9b90eeaf0884);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 7.639580637098622, "col": "thornthwait", "idx": 1}, {"val": 21.102543213690403, "col": "blaney-criddle", "idx": 1}, {"val": 17.56168034714574, "col": "hargreaves", "idx": 1}, {"val": 11.501610611422516, "col": "thornthwait", "idx": 2}, {"val": 21.662315221057217, "col": "blaney-criddle", "idx": 2}, {"val": 20.25174977672627, "col": "hargreaves", "idx": 2}, {"val": 17.682070803057215, "col": "thornthwait", "idx": 3}, {"val": 32.30506052283635, "col": "blaney-criddle", "idx": 3}, {"val": 24.352687417614646, "col": "hargreaves", "idx": 3}, {"val": 30.933115664017183, "col": "thornthwait", "idx": 4}, {"val": 39.75931290689142, "col": "blaney-criddle", "idx": 4}, {"val": 31.925043499788124, "col": "hargreaves", "idx": 4}, {"val": 41.38327058697595, "col": "thornthwait", "idx": 5}, {"val": 49.80266701137098, "col": "blaney-criddle", "idx": 5}, {"val": 36.67288584573284, "col": "hargreaves", "idx": 5}, {"val": 51.23098551029832, "col": "thornthwait", "idx": 6}, {"val": 52.64815717129623, "col": "blaney-criddle", "idx": 6}, {"val": 40.99340616863221, "col": "hargreaves", "idx": 6}, {"val": 59.125135877973264, "col": "thornthwait", "idx": 7}, {"val": 57.715874530964605, "col": "blaney-criddle", "idx": 7}, {"val": 47.000720968512525, "col": "hargreaves", "idx": 7}, {"val": 57.284114886272114, "col": "thornthwait", "idx": 8}, {"val": 53.930407970769785, "col": "blaney-criddle", "idx": 8}, {"val": 49.24177616189516, "col": "hargreaves", "idx": 8}, {"val": 36.12118312137019, "col": "thornthwait", "idx": 9}, {"val": 39.39903461406141, "col": "blaney-criddle", "idx": 9}, {"val": 38.21804408784811, "col": "hargreaves", "idx": 9}, {"val": 23.693675021638192, "col": "thornthwait", "idx": 10}, {"val": 32.55526111904964, "col": "blaney-criddle", "idx": 10}, {"val": 31.85540329246238, "col": "hargreaves", "idx": 10}, {"val": 15.149349249253572, "col": "thornthwait", "idx": 11}, {"val": 24.12845736838993, "col": "blaney-criddle", "idx": 11}, {"val": 25.879568133357356, "col": "hargreaves", "idx": 11}, {"val": 3.382070006537437, "col": "thornthwait", "idx": 12}, {"val": 17.71800169571253, "col": "blaney-criddle", "idx": 12}, {"val": 11.647312792218557, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_255ce5b410624f50a63e2df39abbc5d8);
+            
+            
+        
+    
+            var circle_marker_cc171351875546a2b06e8a6bccf2a1fd = L.circleMarker(
+                [62.45,-114.383],
+                {
+  "bubblingMouseEvents": true, 
+  "color": "crimson", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": true, 
+  "fillColor": "crimson", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "opacity": 1.0, 
+  "radius": 10, 
+  "stroke": true, 
+  "weight": 3
+}
+                ).addTo(map_128d899a237b462c82080d5b7bc55740);
+            
+    
+            var popup_b44db0525e0145c09742a08f630bf945 = L.popup({maxWidth: '650'});
+
+            
+                var vega_88b246f845fd4347a6da5820d8a37301 = $('             <div id="vega_88b246f845fd4347a6da5820d8a37301"></div>             ')[0];
+                popup_b44db0525e0145c09742a08f630bf945.setContent(vega_88b246f845fd4347a6da5820d8a37301);
+            
+
+            circle_marker_cc171351875546a2b06e8a6bccf2a1fd.bindPopup(popup_b44db0525e0145c09742a08f630bf945);
+
+            
+                
+            vega_parse({"legends": [{"title": "Models", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "width", "domain": {"field": "data.idx", "data": "table"}, "type": "linear", "name": "x"}, {"range": "height", "domain": {"field": "data.val", "data": "table"}, "name": "y", "nice": true}, {"range": "category20", "domain": {"field": "data.col", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [{"scale": "x", "type": "x", "title": "Month"}, {"scale": "y", "type": "y", "title": "Potential ET (mm)"}], "height": 200, "padding": "auto", "width": 400, "marks": [{"type": "group", "from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}]}, "marks": [{"type": "line", "properties": {"enter": {"y": {"field": "data.val", "scale": "y"}, "x": {"field": "data.idx", "scale": "x"}, "stroke": {"field": "data.col", "scale": "color"}, "strokeWidth": {"value": 2}}}}]}], "data": [{"values": [{"val": 0.0, "col": "thornthwait", "idx": 1}, {"val": -0.9273443973889647, "col": "blaney-criddle", "idx": 1}, {"val": 0.0, "col": "hargreaves", "idx": 1}, {"val": 0.0, "col": "thornthwait", "idx": 2}, {"val": -3.291595504404847, "col": "blaney-criddle", "idx": 2}, {"val": 0.0, "col": "hargreaves", "idx": 2}, {"val": 0.0, "col": "thornthwait", "idx": 3}, {"val": 4.613904814756491, "col": "blaney-criddle", "idx": 3}, {"val": 0.0, "col": "hargreaves", "idx": 3}, {"val": 0.0, "col": "thornthwait", "idx": 4}, {"val": 14.457147448845218, "col": "blaney-criddle", "idx": 4}, {"val": 0.0, "col": "hargreaves", "idx": 4}, {"val": 34.21260669680955, "col": "thornthwait", "idx": 5}, {"val": 44.84337158920486, "col": "blaney-criddle", "idx": 5}, {"val": 58.6606210724483, "col": "hargreaves", "idx": 5}, {"val": 66.3499390157696, "col": "thornthwait", "idx": 6}, {"val": 60.10239618949525, "col": "blaney-criddle", "idx": 6}, {"val": 103.41795641429083, "col": "hargreaves", "idx": 6}, {"val": 76.8211235388444, "col": "thornthwait", "idx": 7}, {"val": 66.72812440967338, "col": "blaney-criddle", "idx": 7}, {"val": 129.30914493739297, "col": "hargreaves", "idx": 7}, {"val": 56.6417864399217, "col": "thornthwait", "idx": 8}, {"val": 52.315745026831316, "col": "blaney-criddle", "idx": 8}, {"val": 110.304682282181, "col": "hargreaves", "idx": 8}, {"val": 25.996242741986084, "col": "thornthwait", "idx": 9}, {"val": 30.76331360853463, "col": "blaney-criddle", "idx": 9}, {"val": 62.823232118894346, "col": "hargreaves", "idx": 9}, {"val": 8.656611267834705, "col": "thornthwait", "idx": 10}, {"val": 19.670293654062412, "col": "blaney-criddle", "idx": 10}, {"val": 31.804589007297075, "col": "hargreaves", "idx": 10}, {"val": 4.122232215612544, "col": "thornthwait", "idx": 11}, {"val": 11.938129605890767, "col": "blaney-criddle", "idx": 11}, {"val": 24.305043398310215, "col": "hargreaves", "idx": 11}, {"val": 0.0, "col": "thornthwait", "idx": 12}, {"val": 1.9193520306133194, "col": "blaney-criddle", "idx": 12}, {"val": 0.0, "col": "hargreaves", "idx": 12}], "name": "table"}]},vega_88b246f845fd4347a6da5820d8a37301);
+            
+            
+        
+</script>
