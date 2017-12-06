@@ -2,38 +2,18 @@
 Author: Jesse Fleri
 Project: Climate projection comparison
 Module: PETpack
-Last revised: 2017-11-29
+Last revised: 2017-12-05
 '''
 import calendar
 from math import cos,tan,sin,acos,pi,sqrt
 import os
 import numpy as np
-import matplotlib.pyplot as plt
-import random
 import pandas as pd
-import folium
-import csv
-
 
 mdays = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 cdays = [float(np.cumsum(mdays)[i+1])+float(mdays[i])/2 for i in range(-1,11)]
 leap_mdays = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 leap_cdays = [float(np.cumsum(leap_mdays)[i+1])+float(leap_mdays[i])/2 for i in range(-1,11)]
-'''
-t = [12.8,14.7,18.6,22.5,25.4,27.7,28.9,29.0,27.2,23.3,18.7,14.6]
-rn = [2.75,3.42,3.73,3.72,3.91,4.70,5.14,4.87,4.42,4.47,3.69,2.84]
-rn = [(rn[i]*mdays[i+1])/8 for i in range(0,12)]
-mtemp = random.sample(xrange(0,30),12)
-Rn = random.sample(xrange(-50,200),12)
-Ra = random.sample(xrange(400,1400),12)
-import os
-os.chdir(r'E:\wild4952\repository\code')
-temp = [13.2, 15, 18, 22, 25, 27, 28, 28.5, 26.5, 24, 17.7, 14]
-with open("temp1.csv","wb") as fp:
-    writer = csv.writer(fp)
-    for i in temp:
-        writer.writerow([i])
-'''
 
 def draft(n,seq):
     while True:
@@ -100,7 +80,7 @@ def ETt(mtemp, lat, year):           ## estimated mm/month
     alpha = ((675e-9 * pow(I,3)) - (771e-7 * pow(I,2)) + (1792e-5 * I) + float(0.49239))    #constant coefficent
     PET_non = [16*((10*i)/I)**alpha for i in temp]      # Calculate monthly uncorrected PET values
     N = daylight(lat, year)
-    PET_correct = [PET_non[i] * (N[i]/12.0) * (day[i+1]/30.0) for i in range(0,12)]	
+    PET_correct = [(PET_non[i] * (N[i]/12.0) * (day[i+1]/30.0))/2 for i in range(0,12)]	
     return PET_correct
 
 def ET(mtemp, lat, year, rn, elev):
